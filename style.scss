@@ -1,0 +1,62 @@
+@import "assets/scss/config/fonts";
+@import "assets/scss/config/reset";
+@import "assets/scss/config/vars";
+@import "assets/scss/config/utility";
+@import "assets/scss/modules/typography";
+@import "assets/scss/modules/fields";
+@import "assets/scss/modules/buttons";
+@import "assets/scss/modules/toast";
+@import "assets/scss/config/global";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.app-author {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  --gap: 15px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--bcs-grey-4);
+  padding: 10px;
+  transition: all 0.3s var(--ease-elastic-1);
+}
+
+.dark-theme {
+  .app-container {
+    background-color: var(--bcp-grey);
+    color: #fff;
+  }
+}
+
+.dark-mode {
+  display: grid;
+  gap: var(--gap);
+  justify-items: center;
+
+  svg {
+    pointer-events: none;
+    height: 40px;
+    width: 40px;
+  }
+
+  button {
+    transform: scale(1);
+    transition: all 0.3s ease;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    max-width: max-content;
+    &:hover {
+      transform: scale(1.11);
+    }
+  }
+}
+
+
